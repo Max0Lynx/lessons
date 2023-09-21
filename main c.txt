@@ -7,12 +7,7 @@ if(isset($data['auth'])){
     if(trim($data['login']==''))
     {
         $errors[]="Укажите логин!";
-    }
-    if(trim($data['password']==''))
-    {
-        $errors[]="Укажите пароль!";
-    }
-    $user = R::findOne('users', 'login = ?', array($data['login']));
+gin']));
     if($user)
     {
         if(password_verify($data['password'], $user->password)){
